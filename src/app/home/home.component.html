@@ -1,0 +1,15 @@
+<select [(ngModel)]="selectedCity" (ngModelChange)="called()">
+    <option *ngFor="let city of cities"  [value]="city">{{city}}</option>
+</select>
+
+<br>
+
+<select [(ngModel)]="selectedMovie">
+    <option *ngFor="let movie of movies"  [value]="movie.Title">{{movie.Title}}</option>
+</select>
+<br>
+Selected City: {{selectedCity}}
+<br>
+Selected Movie: {{selectedMovie}}
+<br>
+<button (click)="book()">Book Tickets</button>

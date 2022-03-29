@@ -1,0 +1,13 @@
+<div class="seatSelection">
+    <div  class="row" *ngFor="let item of [].constructor(totalRows); let i=index">
+        <div [ngClass]="presentlyBooked(i,j)?'orange column':seat[i][j]==1?'green column':'grey column' " (click)="bookSeat(i,j)"  *ngFor="let item of [].constructor(totalColumns); let j=index"></div>
+        <br>
+    </div>
+        
+</div>
+
+<br>
+<br>
+<h4>No. Of seats left to be booked:{{seatsToBeBooked}}</h4>
+
+<button (click)="bookSelectedSeats()">Book Seats</button>

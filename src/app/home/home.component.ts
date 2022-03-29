@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
-import { MovieServiceService } from './movie-service.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MovieServiceService } from '../movie-service.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
+export class HomeComponent implements OnInit {
   cities:any=[];
   movies:any=[];
   selectedCity:string="Silchar";
   selectedMovie:string="";
  
-  constructor(private movieServiceService:MovieServiceService)
+  constructor(private movieServiceService:MovieServiceService,private _router: Router)
   {
   }
 
   book(){
     this.movieServiceService.setSelectedDetails({movie:this.selectedMovie,city:this.selectedCity});
+    this._router.navigate(['booking']);
   }
 
   called()
@@ -37,5 +39,5 @@ export class AppComponent {
     
     
   }
-  
+
 }
