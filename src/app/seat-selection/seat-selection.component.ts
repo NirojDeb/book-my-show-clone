@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { initializeThemeInCustomizations } from '@uifabric/styling/lib/styles/theme';
+
 import { MovieServiceService } from '../movie-service.service';
 
 @Component({

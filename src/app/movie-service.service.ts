@@ -194,7 +194,6 @@ export class MovieServiceService {
       }
     })
     return timing;
-
   }
 
   getTotalSeats(movieName:string,cityName:string){
